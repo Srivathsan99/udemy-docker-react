@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import React from 'react';
 
 // ------------------- 1st error: -------------------
 // test('renders learn react link', () => {
@@ -21,12 +20,6 @@ import React from 'react';
 
 // ------------------- WORKING PART -------------------
 // 'RUN npm install @testing-library/react@latest' was added to the dockerfile
-test('renders Hi there link', () => {
-  render(<App />); // No need for explicit act
-  const linkElement = screen.getByText(/Hi there/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
 test('renders Hi there link', () => {
   render(<App />); // No need for explicit act
   const linkElement = screen.getByText(/Hi there/i);
