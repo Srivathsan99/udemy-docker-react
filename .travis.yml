@@ -1,11 +1,12 @@
-sudo: required
+# sudo: required
 language: generic
+os: linux
 
 services:
   - docker
 
 before_install:
-  - docker build -t srivathsan99/udemy_docker_react -f Dockerfile.dev . 
+  - docker build -t srivathsan99/udemy_docker_react -f Dockerfile.dev . # 'Srivathsan99/udemy_docker_react' is required when this file is not inside the image file that its running on, used here for following the tutorial
 
 script:
-  - docker run CI=true srivathsan99/udemy_docker_react npm run test -- --coverage
+  - docker run CI=true srivathsan99/udemy_docker_react npm run test # -- --coverage
