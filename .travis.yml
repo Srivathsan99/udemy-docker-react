@@ -8,8 +8,7 @@ services:
 before_install:
   # 'Srivathsan99/udemy_docker_react' is required when this file is not inside the image file that its running on, used here for following the tutorial
   - docker build -t current-repo -f dockerfile.dev . 
-  - echo $REPO_NAME
 
 script:
   # -- --coverage is used to exit out of npm test automatically
-  - docker run CI=true current-repo npm run test -- --coverage
+  - docker run CI=true current-repo npm run test
