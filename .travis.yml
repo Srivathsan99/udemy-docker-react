@@ -11,4 +11,4 @@ before_install:
 
 script:
   # -- --coverage is used to exit out of npm test automatically
-  - docker run CI=true currentrepo npm run test
+  - docker run currentrepo npm run test -- --coverage
