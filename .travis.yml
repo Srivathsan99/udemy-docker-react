@@ -11,4 +11,4 @@ before_install:
 
 script:
   # -- --coverage is used to exit out of npm test automatically
-  - docker run srivathsan99/udemy_docker_react npm run test 
+  - docker run CI=true srivathsan99/udemy_docker_react npm run test 
