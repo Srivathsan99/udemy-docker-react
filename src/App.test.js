@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { act } from 'react';
 import App from './App';
 
 // ------------------- 1st error: -------------------
