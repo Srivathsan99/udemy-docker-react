@@ -1,7 +1,7 @@
 FROM node:16.13.1 as builder            
 
-# WORKDIR '/app' 
-WORKDIR /home/node/app
+WORKDIR '/app' 
+# WORKDIR /home/node/app
 
 COPY package.json .
 
@@ -11,4 +11,5 @@ COPY . .
 RUN npm run build
 
 FROM nginx
-COPY --from=builder /home/node/app/build /usr/share/nginx/html
+# COPY --from=builder /home/node/app/build /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
